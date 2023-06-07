@@ -1,10 +1,9 @@
 export const TasksTitles = () => {
  return (
-      <div className="grid max-[768px]:flex max-[768px]:fixed flex-col grid-cols-8  max-[768px]:mt-3 text-start">
+      <div className="grid max-[768px]:flex max-[768px]:fixed flex-col grid-cols-8 max-[768px]:mt-3 text-start">
         {[
           'Tarefa',
           'Admin',
-          'Membros',
           'Status',
           'Ativo há...',
           'Prazo Final',

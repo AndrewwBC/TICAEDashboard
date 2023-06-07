@@ -23,7 +23,7 @@ export const Aside = () => {
                 [<IoMdBuild />, 'Plataformas'],
                 [<GiNotebook />, 'Planejamentos'],
               ].map(([icon, title]) => (
-                <li className="flex items-center gap-2 cursor-pointer">
+                <li className="group/hea flex items-center gap-2 cursor-pointer">
                   {icon}
                   <span>{title}</span>
                 </li>
