@@ -1,7 +1,8 @@
 import { IoMdBuild} from "react-icons/io";
 import { GiNotebook } from "react-icons/gi";
 import { FaTasks } from "react-icons/fa"
-export const Aside = () => {
+export const Aside = ({setRoute}) => {
+
     return (
         <aside className="shrink px-4 my-1 max-[600px]:hidden"
         >
@@ -19,18 +20,18 @@ export const Aside = () => {
           <nav className="mb-40">
             <ul className="flex flex-col gap-4 ml-4">
               {[
+                [<IoMdBuild />, 'Projetos'],
                 [<FaTasks />, 'Tarefas'],
-                [<IoMdBuild />, 'Plataformas'],
                 [<GiNotebook />, 'Planejamentos'],
               ].map(([icon, title]) => (
-                <li className="group/hea flex items-center gap-2 cursor-pointer">
+                <li key={title} onClick={() => setRoute(title)} className="group/hea flex items-center gap-2 cursor-pointer">
                   {icon}
                   <span>{title}</span>
                 </li>
               ))}
             </ul>
           </nav>
-          <h2 className="text-x">Atualizado em: 20/20/2023</h2>
+          <h2 className="text-x">Atualizado em: 20/05/2023</h2>
         </aside>
     )
 }

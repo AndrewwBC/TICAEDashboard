@@ -21,11 +21,11 @@ const demandasArray = [
 
 export const Progress = () => {
   return (
-    <div className="max-[768px]:grid-cols-1 max-[768px]:h-32 overflow-y-auto bg-white grid grid-cols-2 items-center justify-center gap-6 rounded-md mt-6 p-6">
-      {/* <h2 className="text-2xl" >Plataformas</h2> */}
+    <div className="max-[768px]:grid-cols-1  overflow-y-auto bg-white grid grid-cols-2 items-center justify-center gap-6 rounded-md mt-6 p-6">
+      <h2 className="text-2xl col-span-full" >Projetos</h2>
       {demandasArray.map(({ title, progress }) => {
         return (
-          <div className="grid grid-cols-2 items-center justify-around pt-6 pb-2 bg-stone-600 rounded-lg">
+          <div key={title} className="grid grid-cols-2 items-center justify-around pt-6 pb-2 bg-stone-600 rounded-lg">
             <h2 className="font-medium self-start">{title}</h2>
             <div className="mt-[-10px]">
               <CircularProgress

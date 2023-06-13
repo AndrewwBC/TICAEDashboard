@@ -10,13 +10,13 @@ export const TasksTitles = () => {
         ].map((title) => {
           if (title === 'Tarefa') {
             return (
-              <span className="font-semibold sm:col-start-1 sm:col-end-4 text-gray-800 text-base">
+              <span key={title} className="font-semibold sm:col-start-1 sm:col-end-4 text-gray-800 text-base">
                 {title}
               </span>
             )
           } else {
             return (
-              <span className="text-sm font-semibold text-gray-800 xl:text-base">
+              <span  key={title}  className="text-sm font-semibold text-gray-800 xl:text-base">
                 {title}
               </span>
             )
