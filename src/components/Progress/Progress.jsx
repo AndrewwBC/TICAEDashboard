@@ -26,7 +26,7 @@ const demandasArray = [
   {
     title: "Plataforma de Cursos do IFSul", 
     dataInicio: "16/06/2023",
-    dataFim: "07/22/2023",
+    dataFim: "22/07/2023",
     start: "06/16/2023",
     end: "08/22/2023",
   },
