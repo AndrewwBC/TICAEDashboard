@@ -4,7 +4,6 @@ import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
 const demandasArray = [
   {
     title: "Cursos MOOC",
-    progress: "25",
     dataInicio: "05/06/2023",
     dataFim: "25/06/2023",
     start: "06/05/2023",
@@ -12,7 +11,6 @@ const demandasArray = [
   },
   {
     title: "Fora da Caixa",
-    progress: "50",
     dataInicio: "10/06/2023",
     dataFim: "20/06/2023",
     start: "06/10/2023",
@@ -20,19 +18,17 @@ const demandasArray = [
   },
   {
     title: "Formação Continuada de Servidores... (1° e 2° Ed.)",
-    progress: "75",
     dataInicio: "10/06/2023",
     dataFim: "25/06/2023",
     start: "06/10/2023",
     end: "06/25/2023",
   },
   {
-    title: "Plataforma de Cursos do IFSul",
-    progress: "100",
+    title: "Plataforma de Cursos do IFSul", 
     dataInicio: "16/06/2023",
-    dataFim: "07/07/2023",
+    dataFim: "07/22/2023",
     start: "06/16/2023",
-    end: "07/07/2023",
+    end: "08/22/2023",
   },
 ];
 
@@ -40,7 +36,7 @@ const demandasArray = [
 const getPercentage = (totalPeriod, daysLeft) =>{
   const daysGone = totalPeriod - daysLeft
   const percentage = (daysGone / totalPeriod) * 100
-  
+
   return percentage.toFixed(0)
 }
 
@@ -55,7 +51,14 @@ const getDaysLeft = (start, end) => {
   const mathDate = Math.abs(endDate - todayDate);
   const daysLeft = Math.ceil(mathDate / (1000 * 3600 * 24));
   
+
+  if(todayDate >= endDate){
+    return 100
+  }
+
   const per = getPercentage(totalPeriod, daysLeft)
+
+
   return per
 };
 
