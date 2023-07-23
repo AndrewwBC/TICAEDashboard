@@ -5,7 +5,7 @@ export const MobileMenu = ({setRoute}) => {
 
     return (
         <nav className='fixed bottom-0 right-0 left-0 py-2 px-4 bg-slate-50 min-[600px]:hidden'>
-            <ul className="flex justify-between">
+            <ul className="flex justify-evenly">
               {[
                 [<IoMdBuild size={20} />, 'Projetos'],
                 [<FaTasks size={20}/>, 'Tarefas'],
